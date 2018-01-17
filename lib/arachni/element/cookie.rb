@@ -37,7 +37,7 @@ class Cookie < Base
     include Capabilities::Inputtable
     include Capabilities::Mutable
 
-    ENCODE_CHARACTERS      = ['+', ';', '%', "\0", '&', ' ', '"', "\n", "\r", '=']
+    ENCODE_CHARACTERS      = [';', '%', "\0", '&', ' ', '"', "\n", "\r", '=']
     ENCODE_CHARACTERS_LIST = ENCODE_CHARACTERS.join
 
     ENCODE_CACHE = Arachni::Support::Cache::LeastRecentlyPushed.new( 1_000 )
